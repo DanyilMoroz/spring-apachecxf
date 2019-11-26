@@ -1,0 +1,68 @@
+<!DOCTYPE HTML >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
+    <!-- <link rel="stylesheet" type="text/css" th:href="@{~/css/login.css}" /> -->
+    <title>Varus</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+				aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" th:href="@{'/'}">Varus</a>
+	</nav>
+
+	<div class="container mt-5">
+		<h1 class="display-4 text-center">Persons</h1>
+		<div class="col-12">
+			<div class="table-responsive mt-3">
+				<table class="table table-hover  mt-5">
+					<thead class="thead-dark ">
+					<tr>
+						<th scope="col" class="text-center">ID</th>
+						<th scope="col" class="text-center">Name</th>
+						<th scope="col" class="text-center">Last Name</th>
+						<th scope="col" class="text-center">Date of birth</th>
+						<th scope="col" class="text-center">City</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr th:each="person: ${persons}">
+						<td class="text-center" th:text="${person.id}">ID</td>
+						<td class="text-center" th:text="${person.firstName}">First Name</td>
+						<td class="text-center" th:text="${person.lastName}">Last Name</td>
+						<td class="text-center" th:text="${person.dateOfBirth}">Date Of Birth</td>
+						<td class="text-center" th:text="${person.placeOfBirth}">City</td>
+						<!--<td class="text-center" th:text="${#temporals.format(document.creationTime, 'dd MMMM, yyyy')}">Дата создания</td>-->
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+com\moroz\sample\controller\ApiController.class
+com\moroz\sample\service\Hello.class
+com\moroz\sample\controller\ViewController.class
+com\moroz\sample\config\WebServiceConfig.class
+com\moroz\sample\repo\PersonRepository.class
+com\moroz\sample\config\Conf.class
+com\moroz\sample\service\HelloPortImpl.class
+com\moroz\sample\model\Person.class
+com\moroz\sample\SoutService.class
+com\moroz\sample\config\PersistenceContext.class
+com\moroz\sample\config\ViewConfiguration.class
+com\moroz\sample\MainAppConfig.class
+com\moroz\sample\WebApplicationInitializer.class
